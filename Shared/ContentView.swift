@@ -59,7 +59,7 @@ struct ContentView: View {
         var movePosition = Int.random(in: 0..<9)
         
         while isSquareOccupied(in: moves, forIndex: movePosition) {
-            var movePosition = Int.random(in: 0..<9)
+            movePosition = Int.random(in: 0..<9)
         }
         
         return movePosition
