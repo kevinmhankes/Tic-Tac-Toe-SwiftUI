@@ -40,10 +40,12 @@ struct ContentView: View {
                             
                             if checkWinCondition(for: .human, in: moves) {
                                 print("Human Wins")
+                                return
                             }
                             
                             if checkForDraw(in: moves) {
                                 print("Draw")
+                                return
                             }
                             
                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
@@ -53,10 +55,12 @@ struct ContentView: View {
                                 
                                 if checkWinCondition(for: .computer, in: moves) {
                                     print("Computer Wins")
+                                    return
                                 }
                                 
                                 if checkForDraw(in: moves) {
                                     print("Draw")
+                                    return
                                 }
                             }
                         }
